@@ -1,27 +1,32 @@
-FROM python:3.10-slim
+# Base image
+FROM python:3.12-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    default-libmysqlclient-dev \
+    libmysqlclient-dev \
+    gcc \
+    && apt-get clean
 
 # Set working directory
 WORKDIR /app
 
-# Copy project files into the container
-COPY . .
+# Copy requirements first (for caching)
+COPY requirements.txt .
 
-# Install system dependencies needed to compile packages like mysqlclient
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    default-libmysqlclient-dev \
-    gcc \
-    python3-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Upgrade pip first
-RUN pip install --upgrade pip
-
-# Install Python dependencies from requirements.txt
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 8000 (used by Django dev server)
+# Copy rest of the application
+COPY . .
+
+# Expose port (Django default)
 EXPOSE 8000
 
-# Default command to run the app
+# Default command (you can customize this)
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
