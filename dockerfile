@@ -30,7 +30,7 @@ RUN pip install --upgrade pip
 
 # Copy requirement file and install
 
- pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy entire project
 COPY . .
