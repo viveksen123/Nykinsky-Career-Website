@@ -22,13 +22,6 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-   # Install system dependencies for mysqlclient
-RUN apt-get update && apt-get install -y \
-    default-libmysqlclient-dev \
-    build-essential \
-    python3-dev \
-    && rm -rf /var/lib/apt/lists/*
-
 # Set working directory
 WORKDIR /app
 
@@ -36,8 +29,8 @@ WORKDIR /app
 RUN pip install --upgrade pip
 
 # Copy requirement file and install
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+ pip install --no-cache-dir -r requirements.txt
 
 # Copy entire project
 COPY . .
