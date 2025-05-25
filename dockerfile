@@ -6,6 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install system dependencies needed for packages like mysqlclient, lxml, pillow, etc.
+pip install
 RUN apt-get update && apt-get install -y \
     build-essential \
     default-libmysqlclient-dev \
