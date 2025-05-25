@@ -29,6 +29,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 distlib==0.3.8
 Django==5.0.4
+docker==7.1.0
 executing==2.0.0
 fastjsonschema==2.18.1
 filelock==3.13.1
