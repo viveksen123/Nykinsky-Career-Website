@@ -1,0 +1,467 @@
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- font-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+     <title>Nykinsky Career</title>
+    <link rel="icon" href="{% static 'images/NyK.png' %}" type="image/png">
+    <style>
+        /* Style for the option elements */
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    /* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    padding: 0 20px;
+}
+
+.footer-section h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    color: #ccc;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+
+
+   @media (max-width: 992px) {
+  .navbar-toggler-icon {
+    background-color: /* Your desired background color when collapsed */;
+  }
+}
+
+
+
+}
+
+</style>
+</head>
+
+<body>
+    <!-- navbar-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+  <div class="container">
+<a class="navbar-brand" href="./"> <img src="{% static 'images/logo.png' %}" style="width:173px" alt="Nykinsky Career Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="background-color:#343a40">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="./">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/career">Career Opportunity</a>
+        </li>
+        <!-- Add more navbar items here -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+     <div class="profile-photo">
+            <img src="{% static 'images/careeere.png' %}" alt=""/>
+         <style>
+             .profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* CSS for the profile photo */
+  .profile-photo img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image round */
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .profile-photo {
+      margin-bottom: 10px;
+    }
+  }
+         </style>
+          </div>
+
+
+    <!-- filter box-->
+<!--    <div class="filter-box">-->
+<!--        <div class="filter-dropdown" style="padding-right: 5rem; ">-->
+<!--            <select class="filter-select" style="   margin-right: 90px; " id="LOCATION TYPE" name="LOCATION TYPE">-->
+<!--                <option>LOCATION TYPE</option>-->
+<!--                <option>On-site</option>-->
+<!--                <option>Hybrid</option>-->
+<!--                <option>Remote</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div class="filter-dropdown">-->
+<!--            <select class="filter-select" id="LOCATION" name="LOCATION">-->
+<!--                <option>LOCATION</option>-->
+<!--                <option>Agartala,Tripura</option>-->
+<!--                <option>Agra,Uttar Pradesh</option>-->
+<!--                <option>Ahmedabad,Gujrat</option>-->
+<!--                <option>Ahmedabad,Indore,Chennai,Hyderabad</option>-->
+<!--                <option>Amritsar,Punjab</option>-->
+<!--                <option>Aurangabad,Maharashta</option>-->
+<!--                <option>Bengaluru,Karnataka</option>-->
+<!--                <option>Berhampur, Orissa</option>-->
+<!--                <option>Bhopal, Madhya Pradesh</option>-->
+<!--                <option>Bhubaneshwar, Orissa</option>-->
+<!--                <option>Burdwan, West Bengal</option>-->
+<!--                <option>Chandigarh, Punjab</option>-->
+<!--                <option>Chennai, Tamil Nadu</option>-->
+<!--                <option>Cochin, Kerala</option>-->
+<!--                <option>Coimbatore, Tamil Nadu</option>-->
+<!--                <option>Dehradun, Uttarakhand</option>-->
+<!--                <option>Delhi-NCR</option>-->
+<!--                <option>Dhanbad, Jharkhand</option>-->
+<!--                <option>Faridabad, Haryana</option>-->
+<!--                <option>Goa</option>-->
+<!--                <option>Gurugram, Haryana</option>-->
+<!--                <option>Guwahati, Assam</option>-->
+<!--                <option>Haldwani, Uttrakhand</option>-->
+<!--                <option>Hubli, Karnataka</option>-->
+<!--                <option>Hyderabad, Telangana</option>-->
+<!--                <option>Indore, Madhya Pradesh</option>-->
+<!--                <option>Jaipur, Rajasthan</option>-->
+<!--                <option>Jalandhar, Punjab</option>-->
+<!--                <option>Jammu, Jammu & Kashmir</option>-->
+<!--                <option>Jammu, Jammu & Kashmir</option>-->
+<!--                <option>Jodhpur, Rajasthan</option>-->
+<!--                <option>Kanchipuram, Tamil Nadu</option>-->
+<!--                <option>Kanpur, Uttar Pradesh</option>-->
+<!--                <option>Karnal, Haryana</option>-->
+<!--                <option>Kochi, Kerala</option>-->
+<!--                <option>Kolkata, West Bengal</option>-->
+<!--                <option></option>-->
+<!--                <option>Lucknow, Uttar Pradesh</option>-->
+<!--                <option>Ludhiana, Punjab</option>-->
+<!--                <option>Malda, West Bengal</option>-->
+<!--                <option>Mangalore, Karnataka</option>-->
+<!--                <option>Meerut, Uttar Pradesh</option>-->
+<!--                <option>Mohali, Punjab</option>-->
+<!--                <option>Mumbai, Maharashtra</option>-->
+<!--                <option>Mysore, Karnataka</option>-->
+<!--                <option>Nashik, Maharashtra</option>-->
+<!--                <option>Nizamabad, Telangana</option>-->
+<!--                <option>Noida, Uttar Pradesh</option>-->
+<!--                <option>Panipat, Haryana</option>-->
+<!--                <option>Patna, Bihar</option>-->
+<!--                <option>Pune, Maharashtra</option>-->
+<!--                <option>Punjab,Haryana</option>-->
+<!--                <option>Purba Medinipur, West Bengal</option>-->
+<!--                <option>Raipur, Chhattisgarh</option>-->
+<!--                <option>Rajahmundry, Andhra Pradesh</option>-->
+<!--                <option>Rajamundry, Andhra Pradesh</option>-->
+<!--                <option>Rajkot, Gujarat</option>-->
+<!--                <option>Ranchi, Jharkhand</option>-->
+<!--                <option>Rohtak, Haryana</option>-->
+<!--                <option>Rourkela, Orissa</option>-->
+<!--                <option>Sikar, Rajasthan</option>-->
+<!--                <option>Siliguri, West Bengal</option>-->
+<!--                <option>Surat, Gujarat</option>-->
+<!--                <option>Thrissur, Kerala</option>-->
+<!--                <option>Tirupati, Andhra Pradesh</option>-->
+<!--                <option>Toronto, Canada</option>-->
+<!--                <option>Vadodara, Gujarat</option>-->
+<!--                <option>Varanasi, Uttar Pradesh</option>-->
+<!--                <option>Vijayawada, Andhra Prades</option>-->
+<!--                <option>Visakhapatnam, Andhra Pradesh</option>-->
+<!--                <option>Warangal, Telangana</option>-->
+
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div class="filter-dropdown">-->
+<!--            <select class="filter-select" id="TEAM" name="TEAM">-->
+<!--                <option class="filter-option">TEAM</option>-->
+<!--                <option class="filter-option">Analytics</option>-->
+<!--                <option class="filter-option">EDC Retail</option>-->
+<!--                <option class="filter-option">Offline Merchants-QR</option>-->
+<!--                <option class="filter-option">Business</option>-->
+<!--                <option class="filter-option">CreditMate</option>-->
+<!--                <option class="filter-option">Enterprise Mid-Market</option>-->
+<!--                <option class="filter-option">Fastag</option>-->
+<!--                <option class="filter-option">Insurance</option>-->
+<!--                <option class="filter-option">Lending</option>-->
+<!--                <option class="filter-option">Lending Collection</option>-->
+<!--                <option class="filter-option">Offline Merchants-QR</option>-->
+<!--                <option class="filter-option">nykinsky Insider</option>-->
+<!--                <option class="filter-option">Design</option>-->
+<!--                <option class="filter-option">nykinsky Insider</option>-->
+<!--                <option class="filter-option">Enabling</option>-->
+<!--                <option class="filter-option">CEO's Office</option>-->
+<!--                <option class="filter-option">nykinsky Insider</option>-->
+<!--                <option class="filter-option">Finance</option>-->
+<!--                <option class="filter-option">nykinsky Insider</option>-->
+<!--                <option class="filter-option">Growth</option>-->
+<!--                <option class="filter-option">Consumer Growth</option>-->
+<!--                <option class="filter-option">Fastag</option>-->
+<!--                <option class="filter-option">Lending</option>-->
+<!--                <option class="filter-option">nykinsky First Games</option>-->
+<!--                <option class="filter-option">Transit</option>-->
+<!--                <option class="filter-option">HR</option>-->
+<!--                <option class="filter-option">Recruitment</option>-->
+<!--                <option class="filter-option">Legal,Risk & Compliance</option>-->
+<!--                <option class="filter-option">Internal Audit</option>-->
+<!--                <option class="filter-option">Marketing</option>-->
+<!--                <option class="filter-option">nykinsky Insider</option>-->
+<!--                <option class="filter-option">Operations & Support</option>-->
+<!--                <option class="filter-option">Lending</option>-->
+<!--                <option class="filter-option">Offline Merchants-QR</option>-->
+<!--                <option class="filter-option">nykinsky Insider</option>-->
+<!--                <option class="filter-option">nykinsky Labs</option>-->
+<!--                <option class="filter-option">Labs-Engineering</option>-->
+<!--                <option class="filter-option">Product</option>-->
+<!--                <option class="filter-option">App Product</option>-->
+<!--                <option class="filter-option">Customer Service(CS)</option>-->
+<!--                <option class="filter-option">Insurance</option>-->
+<!--                <option class="filter-option">Lending</option>-->
+<!--                <option class="filter-option">Offline Merchants-QR</option>-->
+<!--                <option class="filter-option">PPBL</option>-->
+<!--                <option class="filter-option">Recharges & Utilities</option>-->
+<!--                <option class="filter-option">Risk</option>-->
+<!--                <option class="filter-option">Sales</option>-->
+<!--                <option class="filter-option">EDC Retail</option>-->
+<!--                <option class="filter-option">Offline Merchants-QR</option>-->
+<!--                <option class="filter-option">Oil & Gas/ Dairy</option>-->
+<!--                <option class="filter-option">nykinsky Ads</option>-->
+
+<!--            </select>-->
+<!--        </div>-->
+<!--        <div class="filter-dropdown">-->
+<!--            <select class="filter-select" id="WORK TYPE" name="WORK TYPE">-->
+<!--                <option>WORK TYPE</option>-->
+<!--                <option>Contractual</option>-->
+<!--                <option>Intern</option>-->
+<!--                <option>On-roll</option>-->
+<!--                <option>QR-Sales</option>-->
+<!--                <option>Undercategorized</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!--job listing-->
+
+    <section class="job-list" id="jobs">
+       
+
+        {% for u_team in uteam %}
+        <h1 style="padding-bottom: 10px;">{{ u_team.title }}</h1>
+        
+        {% for team in data %}
+        {% if team.title == u_team.title %}
+        <div class="job-card">
+            <div class="job-name">
+                <div class="job-detail">
+                       <h3>{{team.job_name }}</h3>
+                    
+                    </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="team_detail?id={{team.id}}">APPLY</a>
+
+            </div>
+            
+        </div>
+
+        {% endif %}
+    
+        {% endfor %}
+        {% endfor %}
+    </section>
+
+    <section class="Blogs" id="Blogs">
+        <h1 class="section-title">Career Advices</h1>
+        <p> Learn more career tips from company's recruiter</p>
+        <div class="Blogs-wrapper">
+            <div class="Blogs-card">
+                <img class="Blogs-image" src="{% static './images/person-sofa-chair-meeting.jpg' %}">
+                <div class="Blogs-detail">
+                    <span>25 March 2024</span>
+                    <h4>How to enjoy your work</h4>
+                    <p>With 10 years of experience in helping businesses grow, we’ve mastered the skills of
+                        understanding business requirements irrespective of the industry they serve.</p>
+                    <hr class="divider">
+
+                </div>
+            </div>
+            <div class="Blogs-card">
+                <img class="Blogs-image" src="{% static './images/Interview-with-one-interviewer-and-two-interviewees-1536x1025.jpeg' %}">
+                <div class="Blogs-detail">
+                    <span>01 April 2024</span>
+                    <h4>Tips for technical interview</h4>
+                    <p>The impression you make on the interviewer often can outweigh your actual credentials. Your poise, attitude, basic social skills, and ability to communicate are evaluated along with your experience and education.</p>
+                    <hr class="divider">
+
+
+                </div>
+            </div>
+            <div class="Blogs-card">
+                <img class="Blogs-image" src="{% static './images/3 Blogs.jpg' %}">
+                <div class="Blogs-detail">
+                    <span>15 April 2024</span>
+                    <h4>How to enjoy your work</h4>
+                    <p>Effective time management skills increase your focus and productivity. They also reduce distractions and procrastination. </p>
+                    <hr class="divider">
+
+
+                </div>
+            </div>
+    </section>
+
+
+     <section class="Blogs" id="Blogs">
+        <h1 class="section-title">Why Nykinsky</h1>
+        <div class="Blogs-wrapper">
+            <div class="Blogs-card">
+                <img class="Blogs-image" src="{% static './images/support.png' %}">
+                <div class="Blogs-detail">
+                    <h4>Support</h4>
+                    <p>Through upskilling and reskilling, and with opportunities to move across the business,
+                        our people, regardless of age or stage of their career, are supported to discover and become the professionals they were meant to be.</p>
+                    <hr class="divider">
+
+                </div>
+            </div>
+            <div class="Blogs-card">
+                <img class="Blogs-image" src="{% static './images/contionous.png' %}">
+                <div class="Blogs-detail">
+                    <h4>Continuous learning</h4>
+                    <p>We equip our associates to deliver innovative solutions, by providing them with opportunities to access and learn from the vast collective experience that exists within NYKINSKY. We ensure they remain at the cutting edge of change.</p>
+                    <hr class="divider">
+
+
+                </div>
+            </div>
+            <div class="Blogs-card">
+                <img class="Blogs-image" src="{% static './images/leading.png' %}">
+                <div class="Blogs-detail">
+                    <h4>Leading with purpose</h4>
+                    <p>Through the application of innovation and our contextual knowledge, we give associates the opportunity to deliver transformative outcomes that benefit society at large and prove that anything is possible. </p>
+                    <hr class="divider">
+
+
+
+
+                </div>
+
+            </div>
+
+    </section>
+
+
+    <div class="profil-photo1">
+            <img src="{% static 'images/ooo.png' %}" alt=""/>
+        <style>
+  /* CSS for the profile photo container */
+  .profil-photo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* CSS for the profile photo */
+  .profil-photo1 img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .profil-photo1 {
+      margin-bottom: 10px;
+    }
+  }
+</style>
+          </div>
+   <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>Welcome to our website! We are dedicated to providing high-quality products/services and exceptional customer experience.</p>
+           <ul class="socials">
+    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://github.com/"><i class="fab fa-github"></i></a></li>
+</ul>
+
+        </div>
+
+        <div class="footer-section links">
+
+        </div>
+    <div class="footer-bottom">
+        &copy; 2024 NyKinSky & Company | Designed by Vivek | All Right Reserved
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-+0rYL/yU8U5PWtEBxLr+5P/QFq1rBRUft4xQFhD13/JTmqlccO2/nPvOIExXj1h7" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,650 @@
+:root {
+    --primarycolor:#0076de;
+    --whitecolor:#fff;
+    --blackcolor:#333;
+    --greycolor:#f6f8fa;
+    --labelcolor:#64b1f5;
+    --yellowcolor:#ffd723;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Nunito",sans-serif;
+}
+body {
+    width:100%;
+    height: auto;
+}
+h1{
+    line-height: 1.5;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2.5rem;
+    z-index: 10;
+    color: white; /* Set text color to white */
+    background-color: rgb(26, 172, 172); /* Set background color */
+}
+
+
+.navbar-logo >a{
+    letter-spacing: 2.5;
+    text-decoration: none;
+    color:var(--whitecolor);
+    
+}
+.navbar-menu{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1050px;
+}
+.navbar-menu > a{
+    color: var(--whitecolor);
+    text-decoration: none;
+}
+.menu-toggle {
+    display: none;
+}
+
+.navbar1{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2.5rem;
+    z-index: 10;
+   color:var(--whitecolor);
+    background-color: rgb(55, 140, 231);
+}
+.navbar-logo1 >a{
+    font-family: "Nunito",sans-serif;
+    letter-spacing: 2.5;
+    text-decoration: none;
+    color:var(--whitecolor);
+    
+}
+.navbar-menu1{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1050px;
+}
+.navbar-menu1 > a{
+    color: var(--whitecolor);
+    text-decoration: none;
+}
+
+.menu-toggle.bar {
+    width: 15px;
+    height: 2px;
+    margin: 3px auto;
+    transition: all 0.3 ease-in-out;
+    background-color: var(--whitecolor);
+    cursor: pointer;
+}
+header {
+    width:1400px;
+    height: 800px;
+    background-image: url("../images/front.jpg");
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: cover;
+    position: relative;
+}
+.header-title {
+    position:absolute;
+    top: 10rem;
+    left: 5rem;
+    letter-spacing: 1;
+    font-weight: bolder;
+    font-size: 30px;
+    color: var(--yellowcolor);
+    text-shadow: 2px 2px 0px rgba(0,0,5,2);
+}
+.header-title > span {
+    color: var(--blackcolor);
+}
+
+.search-wrapper {
+    width: 60%;
+    margin: auto;
+    min-width: 300px;
+    height: 3.5rem;
+    position: relative;
+}
+
+.search-box {
+    width: 100px;
+    position: absolute;
+    background-color: var(--greycolor);
+    box-shadow: rgba(2,11,0,2) 0px 5px 15px;
+    top: -45%;
+    height: 100%;
+    width: 100%;
+
+}
+
+.search-card {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.search-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+
+}
+
+.search-button {
+    width: 200px;
+    background: rgb(72, 105, 10);
+    border: none;
+    color: var(--whitecolor);
+    cursor: pointer;
+}
+
+
+.filter-box {
+    line-height: 40px;
+    max-width: 100%;
+
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+    width: 60%;
+    min-width: 300px;
+    margin: auto;
+}
+
+.filter-dropdown { 
+    display: inline-block;
+    max-width: 100%;
+    outline: none;
+    position: relative;
+    background-color: rgb(72, 105, 10);
+    width: 150px;
+    border-bottom: 1px solid var(--labelcolor);
+    
+}
+.filter-select {
+    border: none;
+    padding: 5px;
+    width: 150px;
+     background-color: rgb(72, 105, 10);
+}
+
+.filter-select:hover{
+    background: var(--greycolor);
+}
+.job-list{
+    margin: 5%;
+    padding: 1rem;
+    background-color: var(--greycolor);
+
+}
+.job-card {
+    display:flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    min-height: 100px;
+    align-items: center;
+    background-color: var(--whitecolor);
+    box-shadow: rgba(0,0,0,0.16)0px 1px 4px;
+    cursor: pointer;
+
+}
+
+.job-card:hover {
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+}
+
+.job-name {
+    display: flex;
+
+}
+.job-profile {
+    width: 60px;
+    height:60px;
+    margin: 0.5rem;
+
+}
+.job-detail {
+    padding: 0 10px;
+}
+.job-detail > h4 {
+    color: var(--primarycolor);
+    font-size: 0.9rem;
+}
+.job-detail > p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.job-label {
+    display: flex;
+    flex-wrap: wrap;
+}
+.job-label > a {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0.2rem;
+    color: var(--whitecolor);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.label-a {
+    background-color: rgb(61, 59, 64);
+}
+
+.job-posted {
+    font-size: 0.8rem;
+}
+.job-more {
+    display:block;
+    padding: 0.3rem 2rem;
+    margin: 20px auto;
+    width: 250px;
+    background-color: transparent;
+    color: var(--primarycolor);
+    border: 1px solid var(--primarycolor);
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+.job-more:hover{
+    background-color:var(--primarycolor);
+    color: var(--whitecolor);
+}
+
+.Blogs {
+    width: 100;
+    height: auto;
+    text-align: center;
+    color: white;
+    
+    background-color:rgb(61, 59, 64);
+    border-shadow:blue;
+}
+
+.Blogs-wrapper {
+    display: flex;
+    flex-wrap: wrap;;
+    justify-content: center;
+
+    padding: 1rem;
+
+}
+.Blogs-card {
+    width: 300px;
+    height: auto;
+    margin: 1rem;
+    box-shadow: 0 1px 6px 0 rgba(49 53 59 / 12%);
+    cursor: pointer;
+}
+ .Blogs-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+ }
+
+ .Blogs-detail {
+    padding: 20px;
+ }
+ .Blogs-detail span {
+    color: var(--yellowcolor);
+    font-size: 0.7rem;
+ }
+ .Blogs-detail h4 {
+    padding: 10px 0;
+ }
+ .divider {
+    margin: 1rem 0;
+    border: 0.5px solid var(--greycolor);
+ }
+ .Blogs-more {
+    color: var(--primarycolor);
+    text-decoration: none;
+    font-size: 0.9rem;
+ }
+  .Blogs-card:hover {
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  }
+
+  footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color:#527853;
+    color: var(--whitecolor);
+    padding: 3rem;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .footer-wrapper h3,
+  .footer-wrapper h4 {
+    line-height: 3;
+    color: var(--yellowcolor);
+  }
+  .footer-wrapper p {
+    max-width: 400px;
+    line-height: 1.5;
+  }
+  .social-media {
+    margin-top: 1rem;
+  }
+  .social-media a {
+    text-decoration: none;
+    color: var(--greycolor);
+    margin-right: 10px;
+  }
+  .footer-wrapper a {
+    text-decoration: none;
+    color: var(--greycolor);
+    line-height: 2;
+  }
+  .footer-wrapper a:hover {
+    text-decoration: underline;
+  }
+
+  .filter-box{
+    margin-right: 200px;
+
+  }
+
+  .filter-dropdown {
+    margin-right: 20px; /* Adjust the value as needed */
+}
+
+
+
+
+.navbar-menu{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-menu > a{
+    color: var(--whitecolor);
+    text-decoration: none;
+}
+
+
+
+
+.header_background {
+    width: 1380px;
+    height: 500px;
+    background-image: url("../images/lll.jpg");
+    background-position: center;
+    background-repeat: no repeat;
+    background-size:cover;
+
+    position: relative;
+}
+.header-title2 {
+    position:absolute;
+    top: 15rem;
+    left: 25rem;
+    letter-spacing: 1;
+    font-weight: bolder;
+    font-size: 45px;
+    color: var(--yellowcolor);
+    text-shadow: 2px 2px 0px rgba(0,0,5,2);
+}
+
+
+
+/* Add your existing CSS styles here */
+@media screen and (max-width: 1400px) {
+    header {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 250px; /* Adjust the height for smaller screens */
+    }
+    .header-title {
+        position:absolute;
+        top: 6rem;
+        left: 2rem;
+        letter-spacing: 1;
+        font-weight: bolder;
+        font-size: 30px;
+        color: var(--yellowcolor);
+        text-shadow: 2px 2px 0px rgba(0,0,5,2);
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(72, 105, 10);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-toggle.bar:nth-child(1) {
+        transform-origin: left center;
+    }
+
+    .menu-toggle.bar:nth-child(2) {
+        transform-origin: right center;
+    }
+
+    .menu-toggle.active.bar:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 5px);
+    }
+
+    .menu-toggle.active.bar:nth-child(2) {
+        transform: rotate(-45deg) translate(2px, 0px);
+    }
+
+    .menu-toggle.active.bar:nth-child(3) {
+        transform: scale(0);
+    }
+
+    .navbar-menu > a {
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 1px solid var(--labelcolor);
+    }
+
+    .search-wrapper {
+        width: 90%;
+        margin: auto;
+        min-width: 300px;
+        height: 3.5rem;
+        position: relative;
+    }
+
+    .filter-box {
+        margin-right: 0; /* Adjust the value as needed */
+    }
+}
+
+
+
+.div {
+    margin: 20px; /* Add margin as needed */
+}
+footer {
+  background-color: #1b5e20; /* Dark green background color */
+  color: #fff; /* White text color */
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  color: #fff; /* White text color */
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ccc; /* Light gray text color on hover */
+}
+
+
+
+
+
+.Blog {
+
+    height: auto;
+    text-align: center;
+    color: rgb(8, 7, 7);
+    background-color:rgb(255, 255, 255);
+    border-shadow:blue;
+}
+
+.Blogs-wrapper {
+    display: flex;
+    flex-wrap: wrap;;
+    justify-content: center;
+
+    padding: 1rem;
+
+}
+.Blogs-card {
+    width: 300px;
+    height: auto;
+    margin: 1rem;
+    box-shadow: 0 1px 6px 0 rgba(49 53 59 / 12%);
+    cursor: pointer;
+}
+ .Blogs-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+ }
+
+ .Blogs-detail {
+    padding: 20px;
+ }
+ .Blogs-detail span {
+    color: var(--yellowcolor);
+    font-size: 0.7rem;
+ }
+ .Blogs-detail h4 {
+    padding: 10px 0;
+ }
+ .divider {
+    margin: 1rem 0;
+    border: 0.5px solid var(--greycolor);
+ }
+ .Blogs-more {
+    color: var(--primarycolor);
+    text-decoration: none;
+    font-size: 0.9rem;
+ }
+  .Blogs-card:hover {
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  }
+
+
+  .cmp-midWeightCta--content {
+    background-color: #0078d4; /* Set background color */
+    color: white; /* Set text color */
+    padding: 50px; /* Add padding */
+}
+
+.midWeightCta--description {
+    margin-bottom: 10px; /* Add some space below the description */
+}
+
+.button--firstCtaLink {
+    display: inline-block; /* Make the link behave as a block element */
+    padding: 10px 10px; /* Add padding */
+    background-color: #ffffff; /* Set background color */
+    color: #0078d4; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+.button--firstCtaLink:hover {
+    background-color: #005a9e; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+
+
+
+
+
+
