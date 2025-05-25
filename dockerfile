@@ -1,27 +1,26 @@
 FROM python:3.10-slim
 
-# Ensure stdout/stderr is not buffered (important for logs in Docker)
-ENV PYTHONUNBUFFERED=1
-
-# Set Django settings module (if your settings file is in a custom location)
-ENV DJANGO_SETTINGS_MODULE=Nykinsky.settings
-
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    gcc \
-    default-libmysqlclient-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-
-# Copy project files into the container
+# Copy your project files
 COPY . .
 
-# Install Python dependencies
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    gcc \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Install Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 8000 (Django default dev server)
+# Expose the Django port
 EXPOSE 8000
 
-# Default command to run Django dev server
+# Default command
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
