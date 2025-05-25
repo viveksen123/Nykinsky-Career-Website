@@ -195,3 +195,5 @@ wsproto==1.2.0
 xlrd==2.0.1
 XlsxWriter==3.1.9
 yarl==1.9.4
+Django==5.0.4
+mysqlclient==2.2.1
