@@ -1,4 +1,5 @@
 FROM python:3.10-slim
+ENV PIP_NO_USE_PEP517=off
 
 WORKDIR /app
 
