@@ -99,7 +99,7 @@ networkx==3.2.1
 nltk==3.8.1
 notebook==7.0.6
 notebook_shim==0.2.3
-numpy==1.24.2
+numpy==1.23
 openai==0.28.0
 opencv-python==4.9.0.80
 opencv-python-headless==4.9.0.80
@@ -140,7 +140,7 @@ python-dotenv==1.0.1
 python-imap==1.0.0
 python-json-logger==2.0.7
 pytz==2023.3.post1
-pywin32==306
+#pywin32==306
 pywinpty==2.0.12
 PyYAML==6.0.1
 pyzmq==25.1.1
