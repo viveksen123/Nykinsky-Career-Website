@@ -1,4 +1,7 @@
 from django.apps import AppConfig
+from flask import Flask
+app = Flask(__name__)
+
 
 
 class HomeConfig(AppConfig):
