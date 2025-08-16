@@ -79,12 +79,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nykinsky',
-        'USER': 'django',
-        'PASSWORD': 'StrongPassword123!',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -120,10 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-import os
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static")
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
