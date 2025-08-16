@@ -78,13 +78,14 @@ WSGI_APPLICATION = 'Nykinsky.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nykinsky',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'NAME': 'nykinsky_db',
+        'USER': 'nykinsky_user',
+        'PASSWORD': 'yourpassword',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
