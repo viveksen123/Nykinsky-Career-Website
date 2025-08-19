@@ -41,3 +41,12 @@ class Job(models.Model):
         return self.title
     class Meta:
         db_table ='jobs'
+
+
+
+from django.db import models
+
+class Job(models.Model):
+    job_name = models.CharField(max_length=255)  # or whatever fields you need
+    description = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
