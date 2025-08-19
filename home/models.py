@@ -33,11 +33,11 @@ class Application(models.Model):
     class Meta:
         db_table ='application_forms'
 
+from django.db import models
+
 class Job(models.Model):
-    title = models.CharField(max_length=255)
     job_name = models.CharField(max_length=255)
-    job_description = models.CharField(max_length=2000)
-    def _str_(self):
-        return self.title
+    description = models.TextField(blank=True, null=True)
+
     class Meta:
-        db_table ='jobs'
+        db_table = "jobs"   # 👈 forces table name
